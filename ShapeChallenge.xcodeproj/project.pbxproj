@@ -1,0 +1,830 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06023E21472C14ACECEAF67E /* Pods_ShapeChallenge_ShapeChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C008A1B6521267F3A5EAD8A1 /* Pods_ShapeChallenge_ShapeChallengeUITests.framework */; };
+		8542A55F255E42AE00C0A555 /* TriangleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8542A55E255E42AE00C0A555 /* TriangleViewController.swift */; };
+		8542A564255E42BC00C0A555 /* CircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8542A563255E42BC00C0A555 /* CircleViewController.swift */; };
+		8542A572255E694100C0A555 /* ShapeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8542A571255E694100C0A555 /* ShapeViewModel.swift */; };
+		8542A589255E6F3B00C0A555 /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8542A588255E6F3B00C0A555 /* RandomViewController.swift */; };
+		8542A59B255E86F200C0A555 /* ColorTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8542A59A255E86F200C0A555 /* ColorTarget.swift */; };
+		8542A5A4255E95D300C0A555 /* StubDataColor.json in Resources */ = {isa = PBXBuildFile; fileRef = 8542A5A3255E95D200C0A555 /* StubDataColor.json */; };
+		8542A5A9255E961A00C0A555 /* StubDataPattern.json in Resources */ = {isa = PBXBuildFile; fileRef = 8542A5A8255E961A00C0A555 /* StubDataPattern.json */; };
+		85B4789C255D217B00616AED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4789B255D217B00616AED /* AppDelegate.swift */; };
+		85B4789E255D217B00616AED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4789D255D217B00616AED /* SceneDelegate.swift */; };
+		85B478A0255D217B00616AED /* SquareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4789F255D217B00616AED /* SquareViewController.swift */; };
+		85B478A3255D217B00616AED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85B478A1255D217B00616AED /* Main.storyboard */; };
+		85B478A5255D217E00616AED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B478A4255D217E00616AED /* Assets.xcassets */; };
+		85B478A8255D217E00616AED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85B478A6255D217E00616AED /* LaunchScreen.storyboard */; };
+		85B478B3255D217F00616AED /* ShapeChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B478B2255D217F00616AED /* ShapeChallengeTests.swift */; };
+		85B478BE255D217F00616AED /* ShapeChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B478BD255D217F00616AED /* ShapeChallengeUITests.swift */; };
+		85B478E9255D246D00616AED /* ColorClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B478E8255D246D00616AED /* ColorClient.swift */; };
+		85B478F1255D268F00616AED /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B478F0255D268F00616AED /* ColorModel.swift */; };
+		85B478F6255D285C00616AED /* PatternModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B478F5255D285C00616AED /* PatternModel.swift */; };
+		85E4625D255D4BC900397C28 /* ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E4625C255D4BC900397C28 /* ShapeView.swift */; };
+		B5E35DFEE19729C6B7A25A3C /* Pods_ShapeChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89229C1E8BB3747E1A19341 /* Pods_ShapeChallengeTests.framework */; };
+		F2527AC022EA3CFE8F92BD6A /* Pods_ShapeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5379F39EBF204B39EE23DE3 /* Pods_ShapeChallenge.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		85B478AF255D217F00616AED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85B47890255D217B00616AED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85B47897255D217B00616AED;
+			remoteInfo = ShapeChallenge;
+		};
+		85B478BA255D217F00616AED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85B47890255D217B00616AED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85B47897255D217B00616AED;
+			remoteInfo = ShapeChallenge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14139C3021FE4998B114FDAD /* Pods-ShapeChallenge-ShapeChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShapeChallenge-ShapeChallengeUITests.release.xcconfig"; path = "Target Support Files/Pods-ShapeChallenge-ShapeChallengeUITests/Pods-ShapeChallenge-ShapeChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		221A3B7C6DE77D1AD6B8DC50 /* Pods-ShapeChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShapeChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-ShapeChallengeTests/Pods-ShapeChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
+		2FA20FF5808AE6514DDE858F /* Pods-ShapeChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShapeChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-ShapeChallengeTests/Pods-ShapeChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3990EE8C5F0277A4914122B6 /* Pods-ShapeChallenge-ShapeChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShapeChallenge-ShapeChallengeUITests.debug.xcconfig"; path = "Target Support Files/Pods-ShapeChallenge-ShapeChallengeUITests/Pods-ShapeChallenge-ShapeChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		48F90274641306C41752A019 /* Pods-ShapeChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShapeChallenge.debug.xcconfig"; path = "Target Support Files/Pods-ShapeChallenge/Pods-ShapeChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		5F1E7EAC7E50691BD9202B8A /* Pods-ShapeChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShapeChallenge.release.xcconfig"; path = "Target Support Files/Pods-ShapeChallenge/Pods-ShapeChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		8542A55E255E42AE00C0A555 /* TriangleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleViewController.swift; sourceTree = "<group>"; };
+		8542A563255E42BC00C0A555 /* CircleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewController.swift; sourceTree = "<group>"; };
+		8542A571255E694100C0A555 /* ShapeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeViewModel.swift; sourceTree = "<group>"; };
+		8542A588255E6F3B00C0A555 /* RandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
+		8542A59A255E86F200C0A555 /* ColorTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTarget.swift; sourceTree = "<group>"; };
+		8542A5A3255E95D200C0A555 /* StubDataColor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StubDataColor.json; sourceTree = "<group>"; };
+		8542A5A8255E961A00C0A555 /* StubDataPattern.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StubDataPattern.json; sourceTree = "<group>"; };
+		85B47898255D217B00616AED /* ShapeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShapeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		85B4789B255D217B00616AED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		85B4789D255D217B00616AED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		85B4789F255D217B00616AED /* SquareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareViewController.swift; sourceTree = "<group>"; };
+		85B478A2255D217B00616AED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		85B478A4255D217E00616AED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		85B478A7255D217E00616AED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		85B478A9255D217E00616AED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85B478AE255D217F00616AED /* ShapeChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShapeChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		85B478B2255D217F00616AED /* ShapeChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeChallengeTests.swift; sourceTree = "<group>"; };
+		85B478B4255D217F00616AED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85B478B9255D217F00616AED /* ShapeChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShapeChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		85B478BD255D217F00616AED /* ShapeChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeChallengeUITests.swift; sourceTree = "<group>"; };
+		85B478BF255D217F00616AED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85B478E8255D246D00616AED /* ColorClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorClient.swift; sourceTree = "<group>"; };
+		85B478F0255D268F00616AED /* ColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorModel.swift; sourceTree = "<group>"; };
+		85B478F5255D285C00616AED /* PatternModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternModel.swift; sourceTree = "<group>"; };
+		85E4625C255D4BC900397C28 /* ShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeView.swift; sourceTree = "<group>"; };
+		C008A1B6521267F3A5EAD8A1 /* Pods_ShapeChallenge_ShapeChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShapeChallenge_ShapeChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5379F39EBF204B39EE23DE3 /* Pods_ShapeChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShapeChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E89229C1E8BB3747E1A19341 /* Pods_ShapeChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShapeChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		85B47895255D217B00616AED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2527AC022EA3CFE8F92BD6A /* Pods_ShapeChallenge.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85B478AB255D217F00616AED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5E35DFEE19729C6B7A25A3C /* Pods_ShapeChallengeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85B478B6255D217F00616AED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06023E21472C14ACECEAF67E /* Pods_ShapeChallenge_ShapeChallengeUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		36ED205C70226D9B4F563CBE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				48F90274641306C41752A019 /* Pods-ShapeChallenge.debug.xcconfig */,
+				5F1E7EAC7E50691BD9202B8A /* Pods-ShapeChallenge.release.xcconfig */,
+				3990EE8C5F0277A4914122B6 /* Pods-ShapeChallenge-ShapeChallengeUITests.debug.xcconfig */,
+				14139C3021FE4998B114FDAD /* Pods-ShapeChallenge-ShapeChallengeUITests.release.xcconfig */,
+				2FA20FF5808AE6514DDE858F /* Pods-ShapeChallengeTests.debug.xcconfig */,
+				221A3B7C6DE77D1AD6B8DC50 /* Pods-ShapeChallengeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8542A5A2255E95D200C0A555 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				8542A5A3255E95D200C0A555 /* StubDataColor.json */,
+				8542A5A8255E961A00C0A555 /* StubDataPattern.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		85B4788F255D217B00616AED = {
+			isa = PBXGroup;
+			children = (
+				85B4789A255D217B00616AED /* ShapeChallenge */,
+				85B478B1255D217F00616AED /* ShapeChallengeTests */,
+				85B478BC255D217F00616AED /* ShapeChallengeUITests */,
+				85B47899255D217B00616AED /* Products */,
+				36ED205C70226D9B4F563CBE /* Pods */,
+				9DCC1BC31BD1AECBCD5F0594 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		85B47899255D217B00616AED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85B47898255D217B00616AED /* ShapeChallenge.app */,
+				85B478AE255D217F00616AED /* ShapeChallengeTests.xctest */,
+				85B478B9255D217F00616AED /* ShapeChallengeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		85B4789A255D217B00616AED /* ShapeChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				85B4789B255D217B00616AED /* AppDelegate.swift */,
+				85B4789D255D217B00616AED /* SceneDelegate.swift */,
+				85B4789F255D217B00616AED /* SquareViewController.swift */,
+				8542A55E255E42AE00C0A555 /* TriangleViewController.swift */,
+				8542A563255E42BC00C0A555 /* CircleViewController.swift */,
+				8542A588255E6F3B00C0A555 /* RandomViewController.swift */,
+				8542A571255E694100C0A555 /* ShapeViewModel.swift */,
+				85B478A1255D217B00616AED /* Main.storyboard */,
+				85E4625B255D4BB900397C28 /* View */,
+				85B478E7255D242D00616AED /* Model */,
+				85B478E6255D242000616AED /* Networking */,
+				8542A5A2255E95D200C0A555 /* Resource */,
+				85B478A4255D217E00616AED /* Assets.xcassets */,
+				85B478A6255D217E00616AED /* LaunchScreen.storyboard */,
+				85B478A9255D217E00616AED /* Info.plist */,
+			);
+			path = ShapeChallenge;
+			sourceTree = "<group>";
+		};
+		85B478B1255D217F00616AED /* ShapeChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				85B478B2255D217F00616AED /* ShapeChallengeTests.swift */,
+				85B478B4255D217F00616AED /* Info.plist */,
+			);
+			path = ShapeChallengeTests;
+			sourceTree = "<group>";
+		};
+		85B478BC255D217F00616AED /* ShapeChallengeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				85B478BD255D217F00616AED /* ShapeChallengeUITests.swift */,
+				85B478BF255D217F00616AED /* Info.plist */,
+			);
+			path = ShapeChallengeUITests;
+			sourceTree = "<group>";
+		};
+		85B478E6255D242000616AED /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8542A59A255E86F200C0A555 /* ColorTarget.swift */,
+				85B478E8255D246D00616AED /* ColorClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		85B478E7255D242D00616AED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				85B478F0255D268F00616AED /* ColorModel.swift */,
+				85B478F5255D285C00616AED /* PatternModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		85E4625B255D4BB900397C28 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				85E4625C255D4BC900397C28 /* ShapeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9DCC1BC31BD1AECBCD5F0594 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5379F39EBF204B39EE23DE3 /* Pods_ShapeChallenge.framework */,
+				C008A1B6521267F3A5EAD8A1 /* Pods_ShapeChallenge_ShapeChallengeUITests.framework */,
+				E89229C1E8BB3747E1A19341 /* Pods_ShapeChallengeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		85B47897255D217B00616AED /* ShapeChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85B478C2255D217F00616AED /* Build configuration list for PBXNativeTarget "ShapeChallenge" */;
+			buildPhases = (
+				F609CAA1E3BAC26ACC6D8E32 /* [CP] Check Pods Manifest.lock */,
+				85B47894255D217B00616AED /* Sources */,
+				85B47895255D217B00616AED /* Frameworks */,
+				85B47896255D217B00616AED /* Resources */,
+				B1BBDBEB315B2345C4E18283 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShapeChallenge;
+			productName = ShapeChallenge;
+			productReference = 85B47898255D217B00616AED /* ShapeChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		85B478AD255D217F00616AED /* ShapeChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85B478C5255D217F00616AED /* Build configuration list for PBXNativeTarget "ShapeChallengeTests" */;
+			buildPhases = (
+				6C566EAC3F02084B20568373 /* [CP] Check Pods Manifest.lock */,
+				85B478AA255D217F00616AED /* Sources */,
+				85B478AB255D217F00616AED /* Frameworks */,
+				85B478AC255D217F00616AED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85B478B0255D217F00616AED /* PBXTargetDependency */,
+			);
+			name = ShapeChallengeTests;
+			productName = ShapeChallengeTests;
+			productReference = 85B478AE255D217F00616AED /* ShapeChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		85B478B8255D217F00616AED /* ShapeChallengeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85B478C8255D217F00616AED /* Build configuration list for PBXNativeTarget "ShapeChallengeUITests" */;
+			buildPhases = (
+				3BB4EDA5A78DCA5BC981DBC3 /* [CP] Check Pods Manifest.lock */,
+				85B478B5255D217F00616AED /* Sources */,
+				85B478B6255D217F00616AED /* Frameworks */,
+				85B478B7255D217F00616AED /* Resources */,
+				B69EC93B6AB277AF8E79165A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85B478BB255D217F00616AED /* PBXTargetDependency */,
+			);
+			name = ShapeChallengeUITests;
+			productName = ShapeChallengeUITests;
+			productReference = 85B478B9255D217F00616AED /* ShapeChallengeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		85B47890255D217B00616AED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					85B47897255D217B00616AED = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					85B478AD255D217F00616AED = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 85B47897255D217B00616AED;
+					};
+					85B478B8255D217F00616AED = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 85B47897255D217B00616AED;
+					};
+				};
+			};
+			buildConfigurationList = 85B47893255D217B00616AED /* Build configuration list for PBXProject "ShapeChallenge" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 85B4788F255D217B00616AED;
+			productRefGroup = 85B47899255D217B00616AED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				85B47897255D217B00616AED /* ShapeChallenge */,
+				85B478AD255D217F00616AED /* ShapeChallengeTests */,
+				85B478B8255D217F00616AED /* ShapeChallengeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		85B47896255D217B00616AED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8542A5A9255E961A00C0A555 /* StubDataPattern.json in Resources */,
+				85B478A8255D217E00616AED /* LaunchScreen.storyboard in Resources */,
+				8542A5A4255E95D300C0A555 /* StubDataColor.json in Resources */,
+				85B478A5255D217E00616AED /* Assets.xcassets in Resources */,
+				85B478A3255D217B00616AED /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85B478AC255D217F00616AED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85B478B7255D217F00616AED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3BB4EDA5A78DCA5BC981DBC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShapeChallenge-ShapeChallengeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C566EAC3F02084B20568373 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShapeChallengeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1BBDBEB315B2345C4E18283 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShapeChallenge/Pods-ShapeChallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShapeChallenge/Pods-ShapeChallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShapeChallenge/Pods-ShapeChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B69EC93B6AB277AF8E79165A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShapeChallenge-ShapeChallengeUITests/Pods-ShapeChallenge-ShapeChallengeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShapeChallenge-ShapeChallengeUITests/Pods-ShapeChallenge-ShapeChallengeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShapeChallenge-ShapeChallengeUITests/Pods-ShapeChallenge-ShapeChallengeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F609CAA1E3BAC26ACC6D8E32 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShapeChallenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		85B47894255D217B00616AED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85B478A0255D217B00616AED /* SquareViewController.swift in Sources */,
+				8542A589255E6F3B00C0A555 /* RandomViewController.swift in Sources */,
+				8542A59B255E86F200C0A555 /* ColorTarget.swift in Sources */,
+				85B4789C255D217B00616AED /* AppDelegate.swift in Sources */,
+				8542A564255E42BC00C0A555 /* CircleViewController.swift in Sources */,
+				85B478E9255D246D00616AED /* ColorClient.swift in Sources */,
+				8542A572255E694100C0A555 /* ShapeViewModel.swift in Sources */,
+				85B4789E255D217B00616AED /* SceneDelegate.swift in Sources */,
+				8542A55F255E42AE00C0A555 /* TriangleViewController.swift in Sources */,
+				85B478F6255D285C00616AED /* PatternModel.swift in Sources */,
+				85B478F1255D268F00616AED /* ColorModel.swift in Sources */,
+				85E4625D255D4BC900397C28 /* ShapeView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85B478AA255D217F00616AED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85B478B3255D217F00616AED /* ShapeChallengeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85B478B5255D217F00616AED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85B478BE255D217F00616AED /* ShapeChallengeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		85B478B0255D217F00616AED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85B47897255D217B00616AED /* ShapeChallenge */;
+			targetProxy = 85B478AF255D217F00616AED /* PBXContainerItemProxy */;
+		};
+		85B478BB255D217F00616AED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85B47897255D217B00616AED /* ShapeChallenge */;
+			targetProxy = 85B478BA255D217F00616AED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		85B478A1255D217B00616AED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85B478A2255D217B00616AED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		85B478A6255D217E00616AED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85B478A7255D217E00616AED /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		85B478C0255D217F00616AED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		85B478C1255D217F00616AED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		85B478C3255D217F00616AED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48F90274641306C41752A019 /* Pods-ShapeChallenge.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9RKNJ2A7P8;
+				INFOPLIST_FILE = ShapeChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tvn.demo.ShapeChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		85B478C4255D217F00616AED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F1E7EAC7E50691BD9202B8A /* Pods-ShapeChallenge.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9RKNJ2A7P8;
+				INFOPLIST_FILE = ShapeChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tvn.demo.ShapeChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		85B478C6255D217F00616AED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FA20FF5808AE6514DDE858F /* Pods-ShapeChallengeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9RKNJ2A7P8;
+				INFOPLIST_FILE = ShapeChallengeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tvn.demo.ShapeChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShapeChallenge.app/ShapeChallenge";
+			};
+			name = Debug;
+		};
+		85B478C7255D217F00616AED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 221A3B7C6DE77D1AD6B8DC50 /* Pods-ShapeChallengeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9RKNJ2A7P8;
+				INFOPLIST_FILE = ShapeChallengeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tvn.demo.ShapeChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShapeChallenge.app/ShapeChallenge";
+			};
+			name = Release;
+		};
+		85B478C9255D217F00616AED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3990EE8C5F0277A4914122B6 /* Pods-ShapeChallenge-ShapeChallengeUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9RKNJ2A7P8;
+				INFOPLIST_FILE = ShapeChallengeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tvn.demo.ShapeChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShapeChallenge;
+			};
+			name = Debug;
+		};
+		85B478CA255D217F00616AED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14139C3021FE4998B114FDAD /* Pods-ShapeChallenge-ShapeChallengeUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9RKNJ2A7P8;
+				INFOPLIST_FILE = ShapeChallengeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tvn.demo.ShapeChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShapeChallenge;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		85B47893255D217B00616AED /* Build configuration list for PBXProject "ShapeChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85B478C0255D217F00616AED /* Debug */,
+				85B478C1255D217F00616AED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85B478C2255D217F00616AED /* Build configuration list for PBXNativeTarget "ShapeChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85B478C3255D217F00616AED /* Debug */,
+				85B478C4255D217F00616AED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85B478C5255D217F00616AED /* Build configuration list for PBXNativeTarget "ShapeChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85B478C6255D217F00616AED /* Debug */,
+				85B478C7255D217F00616AED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85B478C8255D217F00616AED /* Build configuration list for PBXNativeTarget "ShapeChallengeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85B478C9255D217F00616AED /* Debug */,
+				85B478CA255D217F00616AED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 85B47890255D217B00616AED /* Project object */;
+}
