@@ -73,7 +73,8 @@ class ShapeView: UIView {
     func makeFill() {
         let indicator = UIActivityIndicatorView.showInView(self, withBackground: false)
         
-        viewModel.getBackgroundColor { [unowned self] (color) in
+        viewModel.getBackgroundColor { [weak self] (color) in
+            guard let self = self else { return }
             indicator.end {
                 self.identity = self.transform
                 UIView.animate(withDuration: 0.1) {
