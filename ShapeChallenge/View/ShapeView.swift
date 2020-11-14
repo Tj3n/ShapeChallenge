@@ -11,7 +11,7 @@ import TVNExtensions
 
 class ShapeView: UIView {
     var viewModel: ShapeViewModel
-    private var identity = CGAffineTransform.identity
+    private var identity = CGAffineTransform.identity.rotated(by: CGFloat.random(between: 0, and: .pi*2))
     
     init(frame: CGRect, viewModel: ShapeViewModel) {
         self.viewModel = viewModel
@@ -23,11 +23,12 @@ class ShapeView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func draw(_ rect: CGRect) {
-        super.draw(rect)
+    override func willMove(toWindow newWindow: UIWindow?) {
+        super.willMove(toWindow: newWindow)
+        
         switch viewModel.type {
         case .circle:
-            cornerRadius = rect.height/2
+            cornerRadius = self.height/2
         case .triangle:
             let heightWidth = frame.size.width
             let path = CGMutablePath()
@@ -45,8 +46,8 @@ class ShapeView: UIView {
             break
         }
         
-        //Randomly rotate the view
-        transform = transform.rotated(by: CGFloat.random(between: 0, and: .pi*2))
+        //Randomly rotate the view on initial
+        transform = identity
     }
     
     func setupGesture() {
@@ -66,7 +67,7 @@ class ShapeView: UIView {
         doubleTapGesture.numberOfTapsRequired = 2
         addGestureRecognizer(doubleTapGesture)
         
-        makeFill(to: self)
+        makeFill()
     }
 
 // MARK: - Gesture handler
@@ -80,15 +81,12 @@ class ShapeView: UIView {
     }
     
     @objc func onPinch(_ gesture: UIPinchGestureRecognizer) {
-        guard let viewToScale = gesture.view else {
-            return
-        }
-        
+        guard let _ = gesture.view else { return }
         switch gesture.state {
         case .began:
-            identity = viewToScale.transform
+            identity = transform
         case .changed,.ended:
-            viewToScale.transform = identity.scaledBy(x: gesture.scale, y: gesture.scale)
+            transform = identity.scaledBy(x: gesture.scale, y: gesture.scale)
         case .cancelled:
             break
         default:
@@ -97,28 +95,28 @@ class ShapeView: UIView {
     }
     
     @objc func onRotation(_ gesture: UIRotationGestureRecognizer) {
-        guard let view = gesture.view else {
-            return
-        }
-        view.transform = view.transform.rotated(by: gesture.rotation)
+        guard let _ = gesture.view else { return }
+        transform = transform.rotated(by: gesture.rotation)
     }
     
     @objc func onDoubleTap(_ gesture: UITapGestureRecognizer) {
-        guard let shape = gesture.view else { return }
-        makeFill(to: shape)
+        guard let _ = gesture.view else { return }
+        makeFill()
     }
     
-    func makeFill(to shape: UIView) {
+    func makeFill() {
         let indicator = UIActivityIndicatorView.showInView(self, withBackground: false)
         
-        viewModel.getBackgroundColor { (color) in
+        viewModel.getBackgroundColor { [unowned self] (color) in
             indicator.end {
-                shape.transform = .init(scaleX: 0.1, y: 0.1)
-                UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut) {
-                    shape.transform = .identity
-                    shape.backgroundColor = color
+                self.identity = self.transform
+                UIView.animate(withDuration: 0.1) {
+                    self.transform = .init(scaleX: 0.1, y: 0.1)
                 } completion: { (_) in
-                    
+                    UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut) {
+                        self.transform = self.identity
+                        self.backgroundColor = color
+                    }
                 }
             }
         }
