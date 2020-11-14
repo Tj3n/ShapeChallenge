@@ -64,6 +64,7 @@ class ShapeChallengeTests: XCTestCase {
         wait(for: [expectation], timeout: 5.0)
     }
     
+    // Api failure test
     func testMockFailure() throws {
         let serverErrorEndpointClosure = { (target: ColorTarget) -> Endpoint in
           return Endpoint(url: URL(target: target).absoluteString,

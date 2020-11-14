@@ -59,12 +59,12 @@ class ShapeViewModel {
         return shape
     }
     
-    func handleMotionBegan(_ motion: UIEvent.EventSubtype, handler: @escaping (UIView)->()) {
+    func handleMotionBegan(_ motion: UIEvent.EventSubtype, removeShapeHandler: @escaping (UIView)->()) {
         if motion == .motionShake, removeShapeTimer == nil || removeShapeTimer?.isValid != true {
             // Remove shape for each 0.1s device shaking
             removeShapeTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [unowned self] (timer) in
                 if let shape = self.shapes.popLast() {
-                    handler(shape)
+                    removeShapeHandler(shape)
                 } else {
                     timer.invalidate()
                 }
@@ -79,7 +79,7 @@ class ShapeViewModel {
         }
     }
     
-// MARK: - API Background
+// MARK: - API Background Color
     func getBackgroundColor(_ completion: @escaping (UIColor)->()) {
         switch type.fillType {
         case .color:
