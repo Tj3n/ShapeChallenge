@@ -61,7 +61,7 @@ class ShapeViewModel {
     
     func handleMotionBegan(_ motion: UIEvent.EventSubtype, removeShapeHandler: @escaping (UIView)->()) {
         if motion == .motionShake, removeShapeTimer == nil || removeShapeTimer?.isValid != true {
-            // Remove shape for each 0.1s device shaking
+            // Remove 1 shape for each 0.1s device shaking
             removeShapeTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [unowned self] (timer) in
                 if let shape = self.shapes.popLast() {
                     removeShapeHandler(shape)

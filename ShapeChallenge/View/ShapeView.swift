@@ -69,6 +69,24 @@ class ShapeView: UIView {
         
         makeFill()
     }
+    
+    func makeFill() {
+        let indicator = UIActivityIndicatorView.showInView(self, withBackground: false)
+        
+        viewModel.getBackgroundColor { [unowned self] (color) in
+            indicator.end {
+                self.identity = self.transform
+                UIView.animate(withDuration: 0.1) {
+                    self.transform = .init(scaleX: 0.1, y: 0.1)
+                } completion: { (_) in
+                    UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut) {
+                        self.transform = self.identity
+                        self.backgroundColor = color
+                    }
+                }
+            }
+        }
+    }
 
 // MARK: - Gesture handler
     @objc func onDrag(_ gesture: UIPanGestureRecognizer) {
@@ -102,24 +120,6 @@ class ShapeView: UIView {
     @objc func onDoubleTap(_ gesture: UITapGestureRecognizer) {
         guard let _ = gesture.view else { return }
         makeFill()
-    }
-    
-    func makeFill() {
-        let indicator = UIActivityIndicatorView.showInView(self, withBackground: false)
-        
-        viewModel.getBackgroundColor { [unowned self] (color) in
-            indicator.end {
-                self.identity = self.transform
-                UIView.animate(withDuration: 0.1) {
-                    self.transform = .init(scaleX: 0.1, y: 0.1)
-                } completion: { (_) in
-                    UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut) {
-                        self.transform = self.identity
-                        self.backgroundColor = color
-                    }
-                }
-            }
-        }
     }
 }
 
