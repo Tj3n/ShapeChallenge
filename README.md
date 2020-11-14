@@ -1,4 +1,4 @@
-# ShapeChallenge
+# [ShapeChallenge](Challenge.md)
 
 [![Build Status](https://app.bitrise.io/app/295c9c927ff3720e/status.svg?token=zDOFpBWrMBMVZ_zNY0zD5A)](https://app.bitrise.io/app/295c9c927ff3720e)
 
