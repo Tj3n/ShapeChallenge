@@ -9,7 +9,7 @@ import UIKit
 
 class CircleViewController: UIViewController {
     
-    var viewModel = ShapeViewModel()
+    var viewModel = ShapeViewModel(type: .circle)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class CircleViewController: UIViewController {
             return
         }
         
-        let shape = viewModel.createShape(in: view, at: position, type: .circle, fillType: .pattern)
+        let shape = viewModel.createShape(in: view, at: position)
         view.addSubview(shape)
     }
 

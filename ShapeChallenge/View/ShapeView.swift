@@ -9,24 +9,12 @@ import Foundation
 import UIKit
 import TVNExtensions
 
-enum ShapeType {
-    case square, triangle, circle
-}
-
-enum ShapeFillType {
-    case color, pattern, random
-}
-
 class ShapeView: UIView {
-    var colorClient: ColorClient
-    var type: ShapeType
-    var fillType: ShapeFillType
+    var viewModel: ShapeViewModel
     private var identity = CGAffineTransform.identity
     
-    init(frame: CGRect, colorClient: ColorClient, type: ShapeType, fillType: ShapeFillType) {
-        self.colorClient = colorClient
-        self.type = type
-        self.fillType = fillType
+    init(frame: CGRect, viewModel: ShapeViewModel) {
+        self.viewModel = viewModel
         super.init(frame: frame)
         setupGesture()
     }
@@ -37,7 +25,7 @@ class ShapeView: UIView {
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        switch type {
+        switch viewModel.type {
         case .circle:
             cornerRadius = rect.height/2
         case .triangle:
@@ -121,39 +109,9 @@ class ShapeView: UIView {
     }
     
     func makeFill(to shape: UIView) {
-        switch fillType {
-        case .color:
-            addColor(to: self)
-        case .pattern:
-            addPattern(to: self)
-        case .random:
-            if let randomFunc = [addColor, addPattern].randomElement() {
-                randomFunc(self)
-            }
-        }
-    }
-    
-// MARK: - API Background
-    func addColor(to shape: UIView) {
         let indicator = UIActivityIndicatorView.showInView(self, withBackground: false)
         
-        colorClient.getRandomColor { (color) in
-            indicator.end {
-                shape.transform = .init(scaleX: 0.1, y: 0.1)
-                UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut) {
-                    shape.transform = .identity
-                    shape.backgroundColor = color
-                } completion: { (_) in
-                    
-                }
-            }
-        }
-    }
-    
-    func addPattern(to shape: UIView) {
-        let indicator = UIActivityIndicatorView.showInView(self, withBackground: false)
-        
-        colorClient.getRandomPatternColor { (color) in
+        viewModel.getBackgroundColor { (color) in
             indicator.end {
                 shape.transform = .init(scaleX: 0.1, y: 0.1)
                 UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut) {

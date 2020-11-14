@@ -9,7 +9,7 @@ import UIKit
 
 class RandomViewController: UIViewController {
     
-    var viewModel = ShapeViewModel()
+    var viewModel = ShapeViewModel(type: .random)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +22,8 @@ class RandomViewController: UIViewController {
             return
         }
         
-        let types: [(ShapeType, ShapeFillType)] = [(ShapeType.square, ShapeFillType.color), (ShapeType.triangle, ShapeFillType.random), (ShapeType.circle, ShapeFillType.pattern)]
-        if let randomType = types.randomElement() {
-            let shape = viewModel.createShape(in: view, at: position, type: randomType.0, fillType: randomType.1)
-            view.addSubview(shape)
-        }
+        let shape = viewModel.createShape(in: view, at: position)
+        view.addSubview(shape)
     }
 
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {

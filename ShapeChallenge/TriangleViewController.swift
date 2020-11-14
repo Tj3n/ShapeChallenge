@@ -9,7 +9,7 @@ import UIKit
 
 class TriangleViewController: UIViewController {
     
-    var viewModel = ShapeViewModel()
+    var viewModel = ShapeViewModel(type: .triangle)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class TriangleViewController: UIViewController {
             return
         }
         
-        let shape = viewModel.createShape(in: view, at: position, type: .triangle, fillType: .random)
+        let shape = viewModel.createShape(in: view, at: position)
         view.addSubview(shape)
     }
 

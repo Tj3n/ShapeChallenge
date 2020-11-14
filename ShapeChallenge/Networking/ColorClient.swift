@@ -12,7 +12,7 @@ import Moya
 class ColorClient {
     let provider: MoyaProvider<ColorTarget>
     
-    init(provider: MoyaProvider<ColorTarget> = MoyaProvider<ColorTarget>(), latestDate: Date = Date()) {
+    init(provider: MoyaProvider<ColorTarget> = MoyaProvider<ColorTarget>()) {
         self.provider = provider
     }
     

@@ -9,7 +9,7 @@ import UIKit
 
 class SquareViewController: UIViewController {
     
-    var viewModel = ShapeViewModel()
+    var viewModel = ShapeViewModel(type: .square)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class SquareViewController: UIViewController {
             return
         }
         
-        let shape = viewModel.createShape(in: view, at: position, type: .square, fillType: .color)
+        let shape = viewModel.createShape(in: view, at: position)
         view.addSubview(shape)
     }
     

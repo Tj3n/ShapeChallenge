@@ -129,7 +129,7 @@
                             <constraint firstItem="en6-VZ-bEt" firstAttribute="trailing" secondItem="efn-Ql-Zna" secondAttribute="trailing" id="gW3-1r-3aC"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="All" image="triangle.circle" catalog="system" selectedImage="triangle.circle.fill" id="vt6-G0-4kc"/>
+                    <tabBarItem key="tabBarItem" title="All" image="questionmark.circle" catalog="system" selectedImage="questionmark.circle.fill" id="vt6-G0-4kc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WWV-H3-veM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -175,11 +175,11 @@
     <resources>
         <image name="circle" catalog="system" width="128" height="121"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
+        <image name="questionmark.circle" catalog="system" width="128" height="121"/>
+        <image name="questionmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="square" catalog="system" width="128" height="114"/>
         <image name="square.fill" catalog="system" width="128" height="114"/>
         <image name="triangle" catalog="system" width="128" height="112"/>
-        <image name="triangle.circle" catalog="system" width="128" height="121"/>
-        <image name="triangle.circle.fill" catalog="system" width="128" height="121"/>
         <image name="triangle.fill" catalog="system" width="128" height="112"/>
         <systemColor name="quaternaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
