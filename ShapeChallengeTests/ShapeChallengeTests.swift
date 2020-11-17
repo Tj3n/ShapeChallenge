@@ -86,14 +86,20 @@ class ShapeChallengeTests: XCTestCase {
         let client = ColorClient(provider: provider)
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 500, height: 500))
         
-        let viewModel = ShapeViewModel(colorClient: client, type: .square)
-        let shape = viewModel.createShape(in: view, at: view.center)
-        XCTAssertEqual(shape.center, view.center)
-        XCTAssertLessThanOrEqual(shape.width, view.width*0.45)
-        XCTAssertGreaterThanOrEqual(shape.width, view.width*0.1)
-        
-        viewModel.getBackgroundColor { (color) in
-            XCTAssertEqual(color, UIColor.hex("63945F"))
+        let viewModel = ShapeControllerViewModel(colorClient: client, type: .square)
+        viewModel.handleTap(in: view, at: view.center) { shape in
+            XCTAssertEqual(shape.center, view.center)
+            XCTAssertLessThanOrEqual(shape.width, view.width*0.45)
+            XCTAssertGreaterThanOrEqual(shape.width, view.width*0.1)
+            
+            guard let shape = shape as? ShapeView else {
+                XCTFail("Error parsing")
+                return
+            }
+            
+            shape.viewModel.getBackgroundColor { (color) in
+                XCTAssertEqual(color, UIColor.hex("63945F"))
+            }
         }
         
         viewModel.handleMotionBegan(.motionShake) { (shape) in

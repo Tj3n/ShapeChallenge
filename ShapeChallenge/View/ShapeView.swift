@@ -23,14 +23,14 @@ class ShapeView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func willMove(toWindow newWindow: UIWindow?) {
-        super.willMove(toWindow: newWindow)
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
         
         switch viewModel.type {
         case .circle:
-            cornerRadius = self.height/2
+            cornerRadius = rect.height/2
         case .triangle:
-            let heightWidth = frame.size.width
+            let heightWidth = rect.size.width
             let path = CGMutablePath()
             
             path.move(to: CGPoint(x: 0, y: heightWidth))

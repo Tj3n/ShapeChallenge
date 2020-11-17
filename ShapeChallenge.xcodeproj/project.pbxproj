@@ -10,11 +10,13 @@
 		06023E21472C14ACECEAF67E /* Pods_ShapeChallenge_ShapeChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C008A1B6521267F3A5EAD8A1 /* Pods_ShapeChallenge_ShapeChallengeUITests.framework */; };
 		8542A55F255E42AE00C0A555 /* TriangleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8542A55E255E42AE00C0A555 /* TriangleViewController.swift */; };
 		8542A564255E42BC00C0A555 /* CircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8542A563255E42BC00C0A555 /* CircleViewController.swift */; };
-		8542A572255E694100C0A555 /* ShapeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8542A571255E694100C0A555 /* ShapeViewModel.swift */; };
+		8542A572255E694100C0A555 /* ShapeControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8542A571255E694100C0A555 /* ShapeControllerViewModel.swift */; };
 		8542A589255E6F3B00C0A555 /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8542A588255E6F3B00C0A555 /* RandomViewController.swift */; };
 		8542A59B255E86F200C0A555 /* ColorTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8542A59A255E86F200C0A555 /* ColorTarget.swift */; };
 		8542A5A4255E95D300C0A555 /* StubDataColor.json in Resources */ = {isa = PBXBuildFile; fileRef = 8542A5A3255E95D200C0A555 /* StubDataColor.json */; };
 		8542A5A9255E961A00C0A555 /* StubDataPattern.json in Resources */ = {isa = PBXBuildFile; fileRef = 8542A5A8255E961A00C0A555 /* StubDataPattern.json */; };
+		857A169F25638A2400C9D3B1 /* ShapeViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857A169E25638A2400C9D3B1 /* ShapeViewControllerProtocol.swift */; };
+		857A16A425638A7E00C9D3B1 /* ShapeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857A16A325638A7E00C9D3B1 /* ShapeViewModel.swift */; };
 		85B4789C255D217B00616AED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4789B255D217B00616AED /* AppDelegate.swift */; };
 		85B4789E255D217B00616AED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4789D255D217B00616AED /* SceneDelegate.swift */; };
 		85B478A0255D217B00616AED /* SquareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4789F255D217B00616AED /* SquareViewController.swift */; };
@@ -57,11 +59,13 @@
 		5F1E7EAC7E50691BD9202B8A /* Pods-ShapeChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShapeChallenge.release.xcconfig"; path = "Target Support Files/Pods-ShapeChallenge/Pods-ShapeChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		8542A55E255E42AE00C0A555 /* TriangleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleViewController.swift; sourceTree = "<group>"; };
 		8542A563255E42BC00C0A555 /* CircleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewController.swift; sourceTree = "<group>"; };
-		8542A571255E694100C0A555 /* ShapeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeViewModel.swift; sourceTree = "<group>"; };
+		8542A571255E694100C0A555 /* ShapeControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeControllerViewModel.swift; sourceTree = "<group>"; };
 		8542A588255E6F3B00C0A555 /* RandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
 		8542A59A255E86F200C0A555 /* ColorTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTarget.swift; sourceTree = "<group>"; };
 		8542A5A3255E95D200C0A555 /* StubDataColor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StubDataColor.json; sourceTree = "<group>"; };
 		8542A5A8255E961A00C0A555 /* StubDataPattern.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StubDataPattern.json; sourceTree = "<group>"; };
+		857A169E25638A2400C9D3B1 /* ShapeViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeViewControllerProtocol.swift; sourceTree = "<group>"; };
+		857A16A325638A7E00C9D3B1 /* ShapeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeViewModel.swift; sourceTree = "<group>"; };
 		85B47898255D217B00616AED /* ShapeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShapeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B4789B255D217B00616AED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85B4789D255D217B00616AED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,11 +166,12 @@
 			children = (
 				85B4789B255D217B00616AED /* AppDelegate.swift */,
 				85B4789D255D217B00616AED /* SceneDelegate.swift */,
+				857A169E25638A2400C9D3B1 /* ShapeViewControllerProtocol.swift */,
 				85B4789F255D217B00616AED /* SquareViewController.swift */,
 				8542A55E255E42AE00C0A555 /* TriangleViewController.swift */,
 				8542A563255E42BC00C0A555 /* CircleViewController.swift */,
 				8542A588255E6F3B00C0A555 /* RandomViewController.swift */,
-				8542A571255E694100C0A555 /* ShapeViewModel.swift */,
+				8542A571255E694100C0A555 /* ShapeControllerViewModel.swift */,
 				85B478A1255D217B00616AED /* Main.storyboard */,
 				85E4625B255D4BB900397C28 /* View */,
 				85B478E7255D242D00616AED /* Model */,
@@ -219,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				85E4625C255D4BC900397C28 /* ShapeView.swift */,
+				857A16A325638A7E00C9D3B1 /* ShapeViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -473,15 +479,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				857A16A425638A7E00C9D3B1 /* ShapeViewModel.swift in Sources */,
 				85B478A0255D217B00616AED /* SquareViewController.swift in Sources */,
 				8542A589255E6F3B00C0A555 /* RandomViewController.swift in Sources */,
 				8542A59B255E86F200C0A555 /* ColorTarget.swift in Sources */,
 				85B4789C255D217B00616AED /* AppDelegate.swift in Sources */,
 				8542A564255E42BC00C0A555 /* CircleViewController.swift in Sources */,
 				85B478E9255D246D00616AED /* ColorClient.swift in Sources */,
-				8542A572255E694100C0A555 /* ShapeViewModel.swift in Sources */,
+				8542A572255E694100C0A555 /* ShapeControllerViewModel.swift in Sources */,
 				85B4789E255D217B00616AED /* SceneDelegate.swift in Sources */,
 				8542A55F255E42AE00C0A555 /* TriangleViewController.swift in Sources */,
+				857A169F25638A2400C9D3B1 /* ShapeViewControllerProtocol.swift in Sources */,
 				85B478F6255D285C00616AED /* PatternModel.swift in Sources */,
 				85B478F1255D268F00616AED /* ColorModel.swift in Sources */,
 				85E4625D255D4BC900397C28 /* ShapeView.swift in Sources */,

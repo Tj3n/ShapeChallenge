@@ -1,5 +1,5 @@
 //
-//  ShapeViewModel.swift
+//  ShapeControllerViewModel.swift
 //  ShapeChallenge
 //
 //  Created by Vũ Tiến on 11/13/20.
@@ -27,7 +27,7 @@ enum ShapeFillType {
     case color, pattern, random
 }
 
-class ShapeViewModel {
+class ShapeControllerViewModel {
     var shapes = [UIView]()
     var removeShapeTimer: Timer?
     var colorClient: ColorClient
@@ -38,7 +38,15 @@ class ShapeViewModel {
         self.type = type
     }
     
-    func createShape(in view: UIView, at position: CGPoint) -> UIView {
+    func handleTap(in view: UIView, button: UIButton, forEvent event: UIEvent, addingViewHandler: (UIView) -> ()) {
+        guard let touches = event.touches(for: button),
+              let position = touches.first?.location(in: view) else {
+            return
+        }
+        handleTap(in: view, at: position, addingViewHandler: addingViewHandler)
+    }
+    
+    func handleTap(in view: UIView, at position: CGPoint, addingViewHandler: (UIView) -> ()) {
         let maxSize = min(view.width*0.45, view.height*0.45)
         let minSize = max(view.width*0.1, view.height*0.1)
         
@@ -56,7 +64,7 @@ class ShapeViewModel {
         }
         let shape = ShapeView(frame: frame, viewModel: viewModel)
         shapes.append(shape)
-        return shape
+        addingViewHandler(shape)
     }
     
     func handleMotionBegan(_ motion: UIEvent.EventSubtype, removeShapeHandler: @escaping (UIView)->()) {
@@ -76,32 +84,6 @@ class ShapeViewModel {
         if motion == .motionShake {
             removeShapeTimer?.invalidate()
             removeShapeTimer = nil
-        }
-    }
-    
-// MARK: - API Background Color
-    func getBackgroundColor(_ completion: @escaping (UIColor)->()) {
-        switch type.fillType {
-        case .color:
-            getColor(completion)
-        case .pattern:
-            getPattern(completion)
-        case .random:
-            if let randomFunc = [getColor, getPattern].randomElement() {
-                randomFunc(completion)
-            }
-        }
-    }
-    
-    func getColor(_ completion: @escaping (UIColor)->()) {
-        colorClient.getRandomColor { (color) in
-            completion(color)
-        }
-    }
-    
-    func getPattern(_ completion: @escaping (UIColor)->()) {
-        colorClient.getRandomPatternColor { (color) in
-            completion(color)
         }
     }
 }
